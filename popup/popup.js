@@ -1,14 +1,12 @@
 function listenForClicks() {
     document.addEventListener("click", (e) => {
 
-
         function zebrafy(tabs) {
-            //doc = document.body.innerHTML;
-            var article = new Readability(document).parse();
-            doc = ["34", 343, 342];
+            //var article = new Readability(document).parse();
+            //doc = ["34", 343, 342];
             browser.tabs.sendMessage(tabs[0].id, {
                 command: "zebrafy",
-                doc: article
+                doc: "lol"
             });
         }
 
@@ -19,7 +17,6 @@ function listenForClicks() {
         }
     });
 }
-
 
 browser.tabs.executeScript({file: "/content_scripts/zebrafy.js"})
     .then(listenForClicks)

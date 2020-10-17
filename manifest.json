@@ -10,5 +10,13 @@
   "browser_action": {
     "default_title": "Zebra",
     "default_popup": "popup/popup.html"
-  }
+  },
+  "web_accessible_resources": ["Readability.js"],
+  "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["content_scripts/zebrafy.js"]
+      }
+  ]
 }
+
