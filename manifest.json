@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Beastify",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_title": "Zebra",
+    "default_popup": "popup/popup.html"
+  }
+}
